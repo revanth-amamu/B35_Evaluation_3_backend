@@ -32,7 +32,7 @@ const port = process.env.PORT;
 
 app.get('/', (req, res) => {
   try {
-    req.status(200).json({ message: "HI 👋 This B35_Evaluation_3_Backend_API...."})
+    res.status(200).send("HI 👋 This B35_Evaluation_3_Backend_API....")
   } catch (err) {
     res.status(400).json({ message: err.message });
   }
