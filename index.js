@@ -30,6 +30,14 @@ app.use('/tasks', taskRouter);
 
 const port = process.env.PORT;
 
+app.get('/', (req, res) => {
+  try {
+    req.status(200).json({ message: "HI 👋 This B35_Evaluation_3_Backend_API...."})
+  } catch (err) {
+    res.status(400).json({ message: err.message });
+  }
+})
+
 app.listen(port, async () => {
     await connection;
     console.log("Connected to DB");
